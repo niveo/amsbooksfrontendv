@@ -16,6 +16,10 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "ant-design-vue": "^4.1.1",
+    "axios": "^1.6.7",
+    "axios-observable": "^2.0.0",
+    "rxjs": "^7.8.1",
     "vue": "^3.3.11",
     "vue-router": "^4.2.5"
   },

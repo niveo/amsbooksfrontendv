@@ -1,13 +1,14 @@
 <script setup lang="ts">
-import { h } from 'vue';
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterView } from 'vue-router'
 import { HomeOutlined, MenuOutlined } from '@ant-design/icons-vue';
-import { Layout, LayoutHeader, LayoutContent, Button } from 'ant-design-vue';
+import { Layout, LayoutHeader, LayoutContent, Button, Popover } from 'ant-design-vue';
+
 
 
 const visualizarPage = (link: string) => {
 
 }
+
 
 </script>
 
@@ -16,7 +17,12 @@ const visualizarPage = (link: string) => {
     <LayoutHeader class="header">
       <Button type="dashed" ghost shape="circle" :icon="h(HomeOutlined)" @click="visualizarPage('')"></Button>
       <div class="fx-flex"></div>
-      <Button type="dashed" ghost shape="circle" :icon="h(MenuOutlined)" @click="visualizarPage('')"></Button>
+      <Popover title="Title" trigger="click">
+        <template #content>
+
+        </template>
+        <Button type="dashed" ghost shape="circle" :icon="h(MenuOutlined)"></Button>
+      </Popover>
     </LayoutHeader>
     <LayoutContent class="content">
       <div class="inner-content">
